@@ -1,0 +1,9 @@
+# Reflection
+
+The main lesson from this chapter is that the first experiment was useful, but too small to support a final architecture conclusion. In the short MLflow run, the dense model with batch normalisation looked like the clear winner at `80.16%` validation accuracy, while the first CNN attempts were much weaker. That made batch normalisation look important, but it also made the CNN result look worse than it really was.
+
+The overnight run gave a better answer. With `288` tracked configurations, the best model became `overnight_cnn_32_64_128_drop0.1_bn1_lr0.001`, with `87.86%` final validation accuracy and `88.53%` best validation accuracy. The best dense model was close behind at `87.50%`. This revised my interpretation: CNNs did not fail in the first pass because the architecture was unsuitable; they needed a better search over channels, dropout, batch normalisation, and learning rate.
+
+Batch normalisation was still the most reliable improvement. In the overnight grid, the average final validation accuracy increased from about `76.98%` without batch norm to about `80.17%` with batch norm. Dropout was less universal. Strong dropout values depended on the rest of the configuration: `0.1` worked well for the best CNN, while the best dense run used no dropout. I would therefore treat dropout as a hyperparameter to tune, not as a default that always helps.
+
+MLflow was useful because it kept the short and overnight runs comparable. The fresh overnight tracking database avoided mixing stale failed runs with the final results, and the CSV export made it possible to sort by both final and best validation accuracy. The main limitation is that the report still uses validation accuracy only. A more complete study would add a final test-set evaluation and maybe inspect confusion matrices for the classes that are visually similar.

@@ -1,5 +1,25 @@
+/.venv/
+/.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+__pycache__/
+*.egg-info/
 **/modellogs/**
 .notebookcache
 gestures/
 logs/
 .lycheecache
+**/mlruns/
+**/mlflow_overnight.db
+**/mlflow_overnight.db-*
+**/mlflow.db
+**/mlflow.db-*
+**/ray_results/
+**/ray_results*/
+**/wandb/
+communication.md
+debug.log
+3-hypertuning-rnn/history*.csv
+4-hypertuning-ray/report copy.md
+*.pt
+*.pth
+*.ckpt

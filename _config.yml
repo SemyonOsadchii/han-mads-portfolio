@@ -1,5 +1,5 @@
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme
 title: Simon Osadchii - HAN MADS Portfolio
-description: Applied data science portfolio with model tuning, experiment tracking, transfer learning, deployment, and AI ethics work.
+description: Machine learning portfolio for the HAN Master of Applied Data Science

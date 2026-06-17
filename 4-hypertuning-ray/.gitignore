@@ -1,0 +1,15 @@
+data/
+.torch-cache/
+ray_results/
+ray_results*/
+mlflow*.db
+mlflow*.db-*
+results_cuda*.csv
+best_config_cuda*.json
+report.md
+results.csv
+best_config.json
+final_trainer_config.json
+figures/
+build_report_assets.py
+.ipynb_checkpoints/
