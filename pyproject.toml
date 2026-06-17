@@ -7,12 +7,22 @@ requires-python = ">=3.12"
 dependencies = [
     "hyperopt>=0.2.7",
     "mads-datasets[torch]>=0.3.14",
-    "mltrainer>=0.2.5",
+    "matplotlib>=3.10.0",
+    "mlflow>=3.3.2",
+    "mltrainer==0.1.10",
+    "pandas>=2.3.0",
+    "ray[tune]>=2.49.0",
+    "seaborn>=0.13.2",
     "tomlserializer>=0.2.0",
+    "torchvision>=0.22.0",
 ]
 
 [dependency-groups]
 dev = [
+    "ipykernel>=6.30.0",
+    "jupyter>=1.1.1",
+    "nbconvert>=7.16.6",
+    "nbformat>=5.10.4",
     "notebooktester>=0.2.1",
     "ruff>=0.12.11",
 ]

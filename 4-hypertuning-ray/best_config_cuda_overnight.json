@@ -1,0 +1,223 @@
+{
+  "mode": "overnight",
+  "preset": {
+    "mode": "overnight",
+    "description": "Long overnight sweep over transfer learning and compact transformers.",
+    "family_samples": {
+      "resnet18": 32,
+      "transformer": 26
+    },
+    "max_epochs": 20,
+    "image_size": 224,
+    "class_limit": null,
+    "transformer_epochs": 8,
+    "include_transformer_baseline": false,
+    "scheduler": "asha",
+    "grace_period": 5,
+    "reduction_factor": 2,
+    "search_space": "overnight",
+    "cpu_per_trial": 2,
+    "gpu_per_trial": 0
+  },
+  "sweeps": [
+    {
+      "model_type": "resnet18",
+      "num_samples": 32,
+      "search_options": {
+        "model_type": "resnet18",
+        "lr": [
+          5e-05,
+          0.0001,
+          0.0002,
+          0.0003,
+          0.0005,
+          0.0007,
+          0.001,
+          0.0015,
+          0.002
+        ],
+        "dropout": [
+          0.0,
+          0.1,
+          0.15,
+          0.2,
+          0.25,
+          0.35,
+          0.45
+        ],
+        "head_width": [
+          128,
+          256,
+          384,
+          512,
+          768
+        ],
+        "head_layers": [
+          1,
+          2,
+          3
+        ],
+        "head_batch_norm": [
+          0,
+          1
+        ],
+        "activation": [
+          "relu",
+          "gelu",
+          "silu"
+        ],
+        "embed_dim": 96,
+        "depth": 3,
+        "num_heads": 4,
+        "patch_size": 16,
+        "optimizer": [
+          "adamw",
+          "sgd"
+        ],
+        "batch_size": [
+          8,
+          16,
+          24,
+          32
+        ],
+        "unfreeze_blocks": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_decay": [
+          1e-06,
+          1e-05,
+          5e-05,
+          0.0001,
+          0.0005,
+          0.001
+        ],
+        "label_smoothing": [
+          0.0,
+          0.05,
+          0.1,
+          0.15
+        ]
+      },
+      "estimated_total_configurations": 5443200
+    },
+    {
+      "model_type": "transformer",
+      "num_samples": 26,
+      "search_options": {
+        "model_type": "transformer",
+        "lr": [
+          5e-05,
+          0.0001,
+          0.0002,
+          0.0003,
+          0.0005,
+          0.0007,
+          0.001
+        ],
+        "dropout": [
+          0.0,
+          0.1,
+          0.15,
+          0.2,
+          0.25,
+          0.35
+        ],
+        "head_width": [
+          128,
+          256,
+          384,
+          512
+        ],
+        "head_layers": [
+          1,
+          2,
+          3
+        ],
+        "head_batch_norm": [
+          0,
+          1
+        ],
+        "activation": [
+          "relu",
+          "gelu",
+          "silu"
+        ],
+        "embed_dim": [
+          64,
+          96,
+          128,
+          192,
+          256
+        ],
+        "depth": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "num_heads": [
+          4,
+          8
+        ],
+        "patch_size": [
+          8,
+          16,
+          32
+        ],
+        "optimizer": [
+          "adamw"
+        ],
+        "batch_size": [
+          8,
+          16,
+          24
+        ],
+        "unfreeze_blocks": 0,
+        "weight_decay": [
+          1e-06,
+          1e-05,
+          5e-05,
+          0.0001,
+          0.0005
+        ],
+        "label_smoothing": [
+          0.0,
+          0.05,
+          0.1
+        ]
+      },
+      "estimated_total_configurations": 16329600
+    }
+  ],
+  "best_trial_id": "local_resnet18_031",
+  "val_accuracy": 0.9607843137254902,
+  "val_loss": 0.25358664151889826,
+  "config": {
+    "image_size": 224,
+    "epochs": 20,
+    "class_limit": null,
+    "seed": 73,
+    "num_workers": 0,
+    "model_type": "resnet18",
+    "lr": 0.0005,
+    "dropout": 0.0,
+    "head_width": 768,
+    "head_layers": 2,
+    "head_batch_norm": 0,
+    "activation": "gelu",
+    "embed_dim": 96,
+    "depth": 3,
+    "num_heads": 4,
+    "patch_size": 16,
+    "optimizer": "sgd",
+    "batch_size": 8,
+    "unfreeze_blocks": 3,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.05
+  },
+  "transformer_baseline": null
+}
