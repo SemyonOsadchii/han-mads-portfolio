@@ -2,7 +2,7 @@
 
 The portfolio is published with GitHub Pages:
 
-[https://simonosadchii.github.io/han-mads-portfolio/](https://simonosadchii.github.io/han-mads-portfolio/)
+[https://semyonosadchii.github.io/han-mads-portfolio/](https://semyonosadchii.github.io/han-mads-portfolio/)
 
 The site is built from the repository root. The `README.md` file is used as the homepage, and `_config.yml` sets the GitHub Pages theme, title, and description.
 

@@ -1,10 +1,10 @@
-# Simon Osadchii - HAN MADS Portfolio
+# Semyon Osadchii - HAN MADS Portfolio
 
 This repository contains my Semester 3 portfolio work for the HAN Master of Applied Data Science. The chapters document practical machine-learning experiments: tuning dense networks, tracking runs with MLflow, comparing sequence models, testing transfer learning, publishing the work with GitHub Pages, and reflecting on responsible reporting.
 
 The live portfolio is published with GitHub Pages:
 
-[https://simonosadchii.github.io/han-mads-portfolio/](https://simonosadchii.github.io/han-mads-portfolio/)
+[https://semyonosadchii.github.io/han-mads-portfolio/](https://semyonosadchii.github.io/han-mads-portfolio/)
 
 ## Portfolio Contents
 
