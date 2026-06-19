@@ -15,7 +15,7 @@ The live portfolio is published with GitHub Pages:
    MLflow-tracked dense-versus-CNN comparison on Fashion-MNIST. The overnight sweep tracked `288` runs, with the best final CNN reaching `87.86%` validation accuracy.
 
 3. **[Week 3 - Recurrent Models for Gesture Classification](./3-hypertuning-rnn/summary.md)**
-   Time-series classification on the SmartWatch Gestures dataset. Plain RNNs stayed far below the target, while GRU, LSTM, and a smaller Conv1D sweep all passed `90%`; the best Conv1D run finished at `100.00%` validation accuracy.
+   Time-series classification on the SmartWatch Gestures dataset. After rerunning the full search with a user-held-out split, plain RNNs stayed far below the target, while the final Conv1D model reached `96.50%` validation accuracy and `92.27%` test accuracy on an unseen user.
 
 4. **[Week 4 - Transfer Learning and Tuning](./4-hypertuning-ray/summary.md)**
    Transfer-learning comparison on the ants/bees dataset. The final overnight tuning run completed `58` trials, and the best ResNet18 configuration reached `96.08%` validation accuracy, clearly ahead of the compact transformer branch.
